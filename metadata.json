@@ -1,0 +1,6 @@
+{
+  "name": "Mood Money - Gen Z Personal Finance",
+  "description": "Survive 30 days on ₹10,000 with editorial art direction, animated cherry cola warp gradients, safe-to-spend cadence, and decision stress-testing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
