@@ -1,0 +1,529 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cherry-red: #E94355;
+  --color-deep-burgundy: #552139;
+  --color-butter-yellow: #F6DF79;
+  --color-ballet-pink: #F2C6D5;
+  --color-warm-cream: #FFF9F1;
+  --color-espresso: #292225;
+  --color-soft-white: #FFFFFF;
+  --color-surface-dim: #e4d7db;
+  --color-surface-container: #f8eaee;
+  --color-on-surface: #201a1d;
+  --color-on-surface-variant: #5a4040;
+  --color-primary: #b41934;
+  --color-primary-container: #d7364a;
+  --color-on-primary-container: #fffbff;
+}
+
+:root {
+  --font-epilogue: 'Epilogue', sans-serif;
+  --font-hanken: 'Hanken Grotesk', sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: #FFF9F1;
+  color: #292225;
+  font-family: 'Hanken Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Material Symbols icon sizing and optical alignment */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Explicit typographic class fallbacks matching Stitch design */
+.font-display-hero {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.text-display-hero {
+  font-size: 56px;
+  line-height: 60px;
+}
+@media (min-width: 768px) {
+  .text-display-hero {
+    font-size: 72px;
+    line-height: 76px;
+  }
+}
+
+.font-headline-lg {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.text-headline-lg {
+  font-size: 32px;
+  line-height: 38px;
+}
+@media (min-width: 768px) {
+  .text-headline-lg {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+.font-headline-md {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.text-headline-md {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.font-headline-sm {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+}
+.text-headline-sm {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.font-body-lg {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.text-body-lg {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.font-body-md {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+.text-body-md {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.font-body-sm {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.text-body-sm {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.font-label-caps {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.text-label-caps {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.font-label-numeric-lg {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.text-label-numeric-lg {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.font-label-numeric-md {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.text-label-numeric-md {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* Custom spacing aliases from Stitch */
+.px-margin {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 768px) {
+  .px-margin {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.py-space-xl {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .py-space-xl {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.gap-space-xl {
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .gap-space-xl {
+    gap: 2.5rem;
+  }
+}
+
+.gap-space-lg {
+  gap: 1.5rem;
+}
+.gap-space-md {
+  gap: 1rem;
+}
+.gap-space-sm {
+  gap: 0.5rem;
+}
+.gap-space-xs {
+  gap: 0.25rem;
+}
+
+.p-space-xl {
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .p-space-xl {
+    padding: 2.5rem;
+  }
+}
+.p-space-lg {
+  padding: 1.5rem;
+}
+.p-space-md {
+  padding: 1rem;
+}
+.p-space-sm {
+  padding: 0.5rem;
+}
+.p-space-xs {
+  padding: 0.25rem;
+}
+
+.py-space-xs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.px-space-xs {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.py-space-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.px-space-sm {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.py-space-md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.px-space-md {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mb-space-xs {
+  margin-bottom: 0.25rem;
+}
+.mb-space-sm {
+  margin-bottom: 0.5rem;
+}
+.mb-space-md {
+  margin-bottom: 1rem;
+}
+.mb-space-lg {
+  margin-bottom: 1.5rem;
+}
+.mb-space-xl {
+  margin-bottom: 2.5rem;
+}
+
+.mt-space-xs {
+  margin-top: 0.25rem;
+}
+.mt-space-sm {
+  margin-top: 0.5rem;
+}
+.mt-space-md {
+  margin-top: 1rem;
+}
+.mt-space-lg {
+  margin-top: 1.5rem;
+}
+
+.rounded-DEFAULT {
+  border-radius: 0.5rem;
+}
+
+/* ======================================================== */
+/* TACTILE 3D BUTTONS (CHERRY COLA PALETTE) */
+/* ======================================================== */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-height: 44px;
+  cursor: pointer;
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 160ms cubic-bezier(0.16, 1, 0.3, 1), border-color 160ms ease, background-color 160ms ease;
+  touch-action: manipulation;
+  outline: none;
+}
+.btn-3d:focus-visible {
+  outline: 2px solid #E94355;
+  outline-offset: 3px;
+}
+
+/* Primary Cherry-Red 3D Button */
+.btn-3d-cherry {
+  background-color: #E94355;
+  color: #FFFFFF;
+  border: 1.5px solid #292225;
+  border-bottom: 4px solid #552139;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 0 #292225, 0 6px 12px rgba(41, 34, 37, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-3d-cherry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #292225, 0 9px 16px rgba(41, 34, 37, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+.btn-3d-cherry:active {
+  transform: translateY(3px);
+  border-bottom-width: 1.5px;
+  box-shadow: 0 1px 0 #292225, 0 2px 4px rgba(41, 34, 37, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Accent Butter-Yellow 3D Button */
+.btn-3d-yellow {
+  background-color: #F6DF79;
+  color: #292225;
+  border: 1.5px solid #292225;
+  border-bottom: 4px solid #b89b1c;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 0 #292225, 0 6px 12px rgba(41, 34, 37, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.btn-3d-yellow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #292225, 0 8px 14px rgba(41, 34, 37, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.btn-3d-yellow:active {
+  transform: translateY(3px);
+  border-bottom-width: 1.5px;
+  box-shadow: 0 1px 0 #292225, 0 2px 4px rgba(41, 34, 37, 0.15);
+}
+
+/* Secondary White/Cream 3D Button */
+.btn-3d-white {
+  background-color: #FFFFFF;
+  color: #292225;
+  border: 1.5px solid #292225;
+  border-bottom: 3.5px solid #a89196;
+  border-radius: 0.625rem;
+  box-shadow: 0 3.5px 0 #292225, 0 5px 10px rgba(41, 34, 37, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.btn-3d-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5.5px 0 #292225, 0 7px 12px rgba(41, 34, 37, 0.2);
+}
+.btn-3d-white:active {
+  transform: translateY(3px);
+  border-bottom-width: 1.5px;
+  box-shadow: 0 1px 0 #292225;
+}
+
+/* Deep Burgundy 3D Button */
+.btn-3d-burgundy {
+  background-color: #552139;
+  color: #FFF9F1;
+  border: 1.5px solid #292225;
+  border-bottom: 4px solid #292225;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 0 #292225, 0 6px 12px rgba(41, 34, 37, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.btn-3d-burgundy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #292225, 0 8px 14px rgba(41, 34, 37, 0.35);
+}
+.btn-3d-burgundy:active {
+  transform: translateY(3px);
+  border-bottom-width: 1.5px;
+  box-shadow: 0 1px 0 #292225;
+}
+
+/* ======================================================== */
+/* EDITORIAL MOVING TYPOGRAPHY MARQUEE */
+/* ======================================================== */
+@keyframes marquee-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+@keyframes marquee-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.marquee-track-left {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee-left 32s linear infinite;
+  will-change: transform;
+}
+.marquee-track-right {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee-right 38s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track-left,
+  .marquee-track-right {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ======================================================== */
+/* 3D PERSPECTIVE & MONEY JAR UTILITIES */
+/* ======================================================== */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.perspective-800 {
+  perspective: 800px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+@keyframes coin-drop {
+  0% {
+    transform: translateY(-80px) scale(0.7) rotate(0deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px) scale(1.05) rotate(180deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-5px) scale(0.98) rotate(220deg);
+  }
+  100% {
+    transform: translateY(0px) scale(1) rotate(240deg);
+    opacity: 1;
+  }
+}
+.animate-coin-drop {
+  animation: coin-drop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes orb-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(233, 67, 85, 0.3), inset 0 0 12px rgba(246, 223, 121, 0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(233, 67, 85, 0.5), inset 0 0 18px rgba(246, 223, 121, 0.6);
+  }
+}
+.animate-orb-pulse {
+  animation: orb-pulse 4s ease-in-out infinite;
+}
+
+@keyframes jar-jiggle {
+  0% { transform: rotate(0deg) scale(1); }
+  20% { transform: rotate(-2.5deg) scale(1.02); }
+  40% { transform: rotate(2.5deg) scale(1.02); }
+  60% { transform: rotate(-1.5deg) scale(1.01); }
+  80% { transform: rotate(1deg) scale(1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+.animate-jar-jiggle {
+  animation: jar-jiggle 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes gold-shimmer {
+  0% { transform: translateX(-100%) rotate(25deg); opacity: 0; }
+  50% { opacity: 0.6; }
+  100% { transform: translateX(200%) rotate(25deg); opacity: 0; }
+}
+.animate-gold-shimmer {
+  animation: gold-shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes meniscus-wave {
+  0%, 100% { transform: scaleX(1) translateY(0); }
+  50% { transform: scaleX(1.03) translateY(-1.5px); }
+}
+.animate-meniscus {
+  animation: meniscus-wave 3s ease-in-out infinite;
+}
+
+@keyframes float-up-badge {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  25% { transform: translateY(-14px) scale(1.1); opacity: 1; }
+  75% { transform: translateY(-34px) scale(1); opacity: 0.95; }
+  100% { transform: translateY(-50px) scale(0.9); opacity: 0; }
+}
+.animate-float-up-badge {
+  animation: float-up-badge 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes liquid-surge {
+  0% { transform: scaleY(1); }
+  25% { transform: scaleY(1.08) translateY(-4px); }
+  60% { transform: scaleY(0.97) translateY(2px); }
+  100% { transform: scaleY(1) translateY(0); }
+}
+.animate-liquid-surge {
+  animation: liquid-surge 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-orb-pulse,
+  .animate-coin-drop,
+  .animate-jar-jiggle,
+  .animate-gold-shimmer,
+  .animate-meniscus,
+  .animate-float-up-badge,
+  .animate-liquid-surge {
+    animation: none !important;
+  }
+}
